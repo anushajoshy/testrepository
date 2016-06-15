@@ -1,0 +1,25 @@
+In Bamboo -->> Plan Configuration -->> Stages -->> Default Job -->> Tasks 
+
+1. Create a Source Code Checkout Task and connect your GitHub Repo
+
+2. Create a "Script" Task and write the below commands in line which will execute as a batch script: 
+
+**** Script Body ****
+nuget install
+nuget restore
+msbuild CloudGitHubSampleApp.sln /p:VisualStudioVersion=14.0
+cd CloudGitHubSampleApp
+..\.nuget\NuGet.exe pack
+
+**** Script Body ****
+
+This will build the the artifact. Now we need to define the artifact
+
+Go to : Bamboo -->> Plan Configuration -->> Stages -->> Default Job -->> Artifacts 
+
+3. Create definition and gave a name 
+
+Location : CloudGitHubSampleApp
+
+Copy Pattern : *.nupkg
+
