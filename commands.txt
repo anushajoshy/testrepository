@@ -1,3 +1,17 @@
+First thing First.
+
+We need to prepare our bamboo server for DotNet Projects using below steps:
+
+****Bamboo Server Configuration****
+1. Install NuGet.exe and add it to PATH variable (https://dist.nuget.org/win-x86-commandline/latest/nuget.exe) and copy it to C:\NuGet\NuGet.exe . Then add it to PATH variable
+2. Install MSBuild Tools from Visual Studio website (https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx (Microsoft Build Tools 2015))
+3. Install VS2015 Community Edition 
+4. Copy the folder "WebApplications" located at "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v14.0\WebApplications\" from V14.0 to v11.0 as  C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v11.0\WebApplications for getting the target file C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets
+
+*******Bamboo Server Configuration******
+
+Now we will configure the Project Plan for the donet project as below: 
+
 In Bamboo -->> Plan Configuration -->> Stages -->> Default Job -->> Tasks 
 
 1. Create a Source Code Checkout Task and connect your GitHub Repo
@@ -22,4 +36,6 @@ Go to : Bamboo -->> Plan Configuration -->> Stages -->> Default Job -->> Artifac
 Location : CloudGitHubSampleApp
 
 Copy Pattern : *.nupkg
+
+
 
