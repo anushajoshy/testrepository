@@ -1,0 +1,1 @@
+create-release --project WebApp2 --version 1.0.${bamboo.buildNumber} --packageversion 1.0.${bamboo.buildNumber} --server http://10.0.1.5/ --apiKey ${bamboo.OctopusApiKey_Password}
