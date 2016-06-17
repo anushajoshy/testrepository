@@ -1,11 +1,11 @@
 # 1. Your Octopus URL
-$octopusUrl = "http://localhost";
+$octopusUrl = "http://10.0.1.5";
 
 # 2. An API key, preferably for a Service Account (http://docs.octopusdeploy.com/display/OD/Service+Accounts)
 $apiKey = "API-XXXXXXXXXXXXXXXXXXXXXX"
 
-# 3. Path to the package file to upload. Make sure that you are using full path and not regex
-$packageFilePath = "C:\Temp\HelloWorldWebApp.2.1.0.0.nupkg";
+# 3. Path to the package file to upload
+$packageFilePath = "${bamboo.build.working.directory}\CloudGitHubSampleApp.1.0.0.0.nupkg";
 
 # 4. true to overwrite existing packages (Requires: BuiltInFeedAdminister permission)
 $replaceExisting = $true;
