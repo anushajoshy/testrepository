@@ -1,0 +1,1 @@
+deploy-release --project WebApp2 --deployTo Development --version 1.0.${bamboo.buildNumber} --server=http://10.0.1.5/ --apikey=${bamboo.OctopusApiKey_Password} --progress
