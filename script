@@ -1,0 +1,3 @@
+nuget install
+nuget restore
+msbuild WebApplication2.sln  /p:VisualStudioVersion=14.0 /p:RunOctoPack=true /p:OctoPackPackageVersion=1.0.${bamboo.buildNumber} /p:OctoPackPublishPackageToHttp=http://10.0.1.5/nuget/packages /p:OctoPackPublishApiKey=${bamboo.OctopusApiKey_Password}
